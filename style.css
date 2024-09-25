@@ -1,0 +1,419 @@
+html{
+    background-color: black
+}
+
+@font-face {
+    font-family: 'Stadio';
+
+    src: url('StadioNowVariableGX.ttf');
+}
+@font-face {
+    font-family: 'BigStem';
+
+    src: url('BigStem-Regular.ttf');
+}
+header {
+    margin: 0;
+    color: white;
+    min-height: 20vh;
+    padding: 0px;
+    position: static;
+    top: 0;
+    overflow: hidden;
+    line-height: 10px;
+    padding: 0px 20px;
+    display: none;
+} 
+
+.wrapper{
+    font-family: 'BigStem', arial;
+
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+    background: white;
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+#active:checked ~ .wrapper{
+    clip-path: circle(75%);
+}
+.menu-btn{
+    position: fixed;
+    z-index: 1000;
+    right: 20px;
+    
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    border-color: black;
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+    color: black;
+}
+#active:checked ~ .menu-btn i:before{
+    content: "\f00d";
+}
+.wrapper ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    z-index: 999;
+}
+.wrapper ul li{
+    margin: 10% auto;
+    z-index: 1000;
+}
+.wrapper ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: calc(20px + 1.3vw);
+    font-weight: 500;
+    padding: 3px 7px;
+    color: black;
+    border-radius: 50px;
+    background: white;
+    position: relative;
+    line-height: 40px;
+    transition: all 0.3s ease;
+    z-index: 1999;
+    @media (max-width: 768px) {
+        font-size: calc(20px + 1.1vw);
+    }
+}
+.wrapper ul li a:after{
+    position: absolute;
+    content: "";
+    background: black;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    
+    width: 104%;
+    height: 110%;
+    left: -2%;
+    top:-5%;
+    
+    border-radius: 60px;
+    transform: scaleY(0);
+    z-index: -1;
+    animation: rotate 1.5s linear infinite;
+    transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after{
+    transform: scaleY(1);
+}
+.wrapper ul li a:hover{
+    color: black;
+}
+input[type="checkbox"]{
+    display: none;
+}
+@keyframes rotate {
+    0%{
+      filter: hue-rotate(0deg);
+    }
+    100%{
+      filter: hue-rotate(360deg);
+    }
+}
+.bb {
+    height: calc(800px + 100vw);
+
+    @media (min-width: 500px) {
+        height: calc(500px + 100vw);
+    }
+
+    @media (min-width: 768px) and (min-height: 600px) {
+        height: 95vh;
+    }
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.input-win {
+    font-family: 'Stadio', arial;
+    height: 80%;
+    width: 90%;
+    position: relative;
+    padding: 0px 5px 5px 5px;
+    /*margin-top:20%;*/
+    
+    /*translate: (0,-50%);*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    background-color: white;
+    border-radius:20px;
+}
+.child1{
+    
+
+    background-color: white;
+    position: relative;
+    top: 15px;
+    margin-left: 10px;
+    font-size: calc(20px + 0.3vw);
+    @media (max-width: 768px) {
+        font-size: calc(15px + 0.001vw);
+    }
+    
+
+}
+.hello {
+    width: 100%;
+}
+
+.hello1 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.hello2 {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.bbl {
+    width: 100%;
+    
+    
+}
+.child2{
+    
+
+    background-color: white;
+    position: relative;
+    margin-left:20px;
+    font-size: 20px;
+    color: black;
+    font-size: calc(20px + 0.3vw);
+    @media (max-width: 768px) {
+        font-size: calc(15px + 0.001vw);
+    }
+
+
+    
+    /*
+    top:50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    */
+
+}
+.child2ind{
+    float: left;
+    margin-left:10px;
+    position: relative;
+    font-size: calc(20px + 0.3vw);
+    @media (max-width: 768px) {
+        font-size: calc(15px + 0.001vw);
+    }
+
+}
+
+.container {
+    display: block;
+    
+    position: relative;
+    padding-left: 35px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: calc(20px + 0.3vw);
+    @media (max-width: 768px) {
+        font-size: calc(15px + 0.001vw);
+    }
+    user-select: none;
+  }
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    margin-top: 10px;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    margin-top: 10px;
+    background-color: #eee;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+
+
+
+
+  .header1 {
+    margin: 0;
+    color: black;
+    min-height: 20vh;
+    padding: 0px;
+    position: static;
+    top: 0;
+    overflow: hidden;
+    line-height: 10px;
+    padding: 0px 20px;
+} 
+
+.wrapper1 {
+    font-family: 'BigStem', arial;
+
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    
+    background: black;
+    clip-path: circle(24px at calc(100% - 115px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+#active1:checked ~ .wrapper1{
+    clip-path: circle(75%);
+}
+.menu-btn1{
+    position: fixed;
+    z-index: 1000;
+    right: 90px;
+    
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s ease-in-out;
+}
+#active1:checked ~ .menu-btn1{
+    color: black;
+}
+
+#active1:checked ~ .menu-btn1 i:before{
+    content: "\f00d";
+}
+
+.wrapper1 ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    z-index: 5;
+}
+.wrapper1 ul li{
+    margin: 10% auto;
+    z-index: 5;
+}
+.wrapper1 ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: calc(20px + 1.3vw);
+    font-weight: 500;
+    padding: 3px 7px;
+    color: white;
+    border-radius: 50px;
+    background: black;
+    position: relative;
+    line-height: 40px;
+    transition: all 0.3s ease;
+    z-index: 998;
+    @media (max-width: 768px) {
+        font-size: calc(20px + 1.1vw);
+    }
+}
+.wrapper1 ul li a:after{
+    position: absolute;
+    content: "";
+    background: black;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    
+    width: 104%;
+    height: 110%;
+    left: -2%;
+    top:-5%;
+    
+    border-radius: 60px;
+    transform: scaleY(0);
+    z-index: -1;
+    animation: rotate 1.5s linear infinite;
+    transition: transform 0.3s ease;
+}
+.wrapper1 ul li a:hover:after{
+    transform: scaleY(1);
+}
+.wrapper1 ul li a:hover{
+    color: black;
+}
+input[type="checkbox"]{
+    display: none;
+}
+@keyframes rotate {
+    0%{
+      filter: hue-rotate(0deg);
+    }
+    100%{
+      filter: hue-rotate(360deg);
+    }
+}

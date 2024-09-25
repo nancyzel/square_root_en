@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+<link href="style.css" rel="stylesheet" type="text/css" media="all" >
+<script src="polynom_eng.js"></script>
+<title>Square trinomial</title>
+</head>
+
+<body class="bb">
+    <div class="header">
+        <input type="checkbox" id="active">
+        <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+        <div class="wrapper">
+            <ul>
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href=real_en.html>Real numbers</a></li>
+                <li><a href=complex_en.html>Complex numbers</a></li>
+                <li><a href=trinomial_en.html>Square trinomial</a></li>
+                <li><a href=https://docs.google.com/forms/d/e/1FAIpQLSe_C3APFTaMJb7v6GUz5Z_tebFP68XXWKh1VD5bbgHCo6fdPg/viewform?usp=sf_link>Feedback</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="header1">
+        <input type="checkbox" id="active1">
+        <label for="active1" class="menu-btn1"><i class="fa fa-globe"></i></label>
+        <div class="wrapper1">
+            <ul>
+                <li><a class="active1" href="ru_index.html">Русский</a></li>
+                <li><a href=hindi_index.html>हिन्दी</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="input-win">
+
+        <div class="child1">
+            <h1 align="center" style="font-family:'BigStem'">Extracting the square root from a square trinomial</h1>
+
+            <div class="bbl">
+                <div class="hello">
+                    <label for="a" style="color: black;">Enter the highest coefficient (when entering a real number, use the "." sign to separate the integer and decimal parts):</label>
+                </div>
+                <div class="hello1">
+                    <input type="text" id="arg_a" name="arg_a" size="20" style="color: black;"/>
+                </div>
+            </div>
+            <div class="bbl">
+                <div class="hello">
+                    <label for="b" style="color: black;">Enter the second coefficient (when entering a real number, use the "." sign to separate the integer and decimal parts):</label>
+                </div>
+                <div class="hello1">
+                    <input type="text" id="arg_b" name="arg_b" size="20" style="color: black;"/>
+                </div>
+            </div>
+            <div class="bbl">
+                <div class="hello">
+                    <label for="c" style="color: black;">Enter the free coefficient (when entering a real number, use the "." sign to separate the integer and decimal parts):</label>
+                </div>
+                <div class="hello1">
+                    <input type="text" id="arg_c" name="arg_c" size="20" style="color: black;"/>
+                </div>
+                <div class="hello">
+                    <label for="precision" style="color: black;">Enter the exact sign you want to get the result:</label>
+                </div>
+                <div class="hello1">
+                    <input type="text" id="precision" name="precision" size="20" style="color: black;"/>
+                </div>
+
+                <div class="hello">
+                    <button onclick="sqrt_polynom()">Calculate</button>
+                </div>
+                <div class="hello2">
+                    <p class="name1"></p>  
+                </div>
+            </div>
+
+        
+    </div>
+
+</body>
+</html>
