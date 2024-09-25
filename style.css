@@ -510,7 +510,7 @@ input[type="checkbox"]{
 
     @media (min-width: 768px) and (min-height: 600px) {
 
-        height: 95vh;
+        height: calc(500px + 95vh);
 
     }
 
@@ -538,23 +538,11 @@ input[type="checkbox"]{
 
     padding: 0px 5px 5px 5px;
 
-    /*margin-top:20%;*/
-
-    
-
-    /*translate: (0,-50%);*/
-
-    /*margin-left: auto;*/
-
-    /*margin-right: auto;*/
 
     display: flex;
 
     flex-direction: column;
 
-    /*justify-content: center;*/
-
-    /*align-items: center;*/
 
     background-color: white;
 
